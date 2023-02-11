@@ -1,7 +1,7 @@
-import express from "express";
-import {ROUTE_URL} from '../constants'
-import UserController from "../controllers/UserController";
-import PostsController from "../controllers/PostsController";
+import express from 'express';
+import { ROUTE_URL } from '../constants';
+import UserController from '../controllers/UserController';
+import PostsController from '../controllers/PostsController';
 const router = express.Router();
 
 router.get(ROUTE_URL.HEALTH_CHECK, UserController.healthCheck);
@@ -19,6 +19,5 @@ router.get(ROUTE_URL.GET_POST, PostsController.getPost);
 router.post(ROUTE_URL.GET_POSTS, PostsController.createPost);
 router.put(ROUTE_URL.UPDATE_POST, PostsController.updatePost);
 router.delete(ROUTE_URL.DELET_POST, PostsController.deletePost);
-
 
 export default router;
